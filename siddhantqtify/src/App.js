@@ -1,15 +1,16 @@
 // import logo from './logo.svg';
 // import './App.css';
-import React from "react";
-import Button from "./components/Button/Button";
-import Search from "./components/Search/Search";
+import React, { useState } from "react";
+import NavBar from "./components/NavBar/NavBar";
+import Hero from "./components/Hero/Hero";
 
 
 function App() {
+  const [searchData, setSearchData] = useState();
   return (
     <>
-      <Button>Give Feedback</Button>
-      <Search placeholder={"Search a album of your choice"}></Search>
+      <NavBar searchData={searchData}/>
+      <Hero/>
     </>
   );
 }
