@@ -6,9 +6,16 @@ import 'swiper/css';
 import styles from "./Carousel.module.css";
 import CarouselLeftNavigation from './CarouselLeftNavigation/CarouselLeftNavigation';
 import CarouselRightNavigation from './CarouselRightNavigation/CarouselRightNavigation';
-import { Controls } from './components/Controls/Controls';
 
 
+const Controls = ({ data }) => {
+    const swiper = useSwiper();
+    useEffect(() => {
+        swiper.slideTo(0);
+        // eslint-disable-next-line
+    }, [data]);
+    return null;
+}
 
 const Carousel = ({ data, renderComponent }) => {
     return (
