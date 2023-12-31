@@ -6,6 +6,7 @@ import Section from '../../components/Section/Section';
 
 const HomePage = () => {
     const { data } = useOutletContext();
+    // eslint-disable-next-line
     const { topAlbums, newAlbums, songs } = data;
     return (
         <>

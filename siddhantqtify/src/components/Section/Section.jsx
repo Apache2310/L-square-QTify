@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "../../components/Card/Card";
 import styles from "./Section.module.css"
 import { CircularProgress } from "@mui/material";
+import Carousel from "../Carousel/Carousel";
 
 
 const Section = ({title, data, type}) => {
@@ -28,9 +29,11 @@ const Section = ({title, data, type}) => {
                             ))}
                         </div>
                     ) : (
-                        // carousel
-                        null
-                    )}
+                       <Carousel
+                            data = {data}
+                            renderComponent={(data) => <Card data = {data} type = {type} />}
+                        />
+                            )}
                 </div>
             )}
         </div>
