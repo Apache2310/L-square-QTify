@@ -35,9 +35,9 @@ const Section = ({title, data, filterSource, type}) => {
         <div>
             <div className = {styles.header}>
                 <h3>{title}</h3>
-                <h4 className={styles.toggleText} onClick={handleToggle}>
+                {!showFilters && <h4 className={styles.toggleText} onClick={handleToggle}>
                     {!carouselToggle ? "Collapse All" : "Show All"}
-                </h4>
+                </h4>}
             </div>
 
             {showFilters && (
