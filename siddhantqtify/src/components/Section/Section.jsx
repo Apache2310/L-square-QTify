@@ -16,7 +16,7 @@ const Section = ({title, data, type}) => {
         <div>
             <div className = {styles.header}>
                 <h3>{title}</h3>
-                <h4 className={styles.toggleText} onClick={handleToggle}>{!carouselToggle ? "Show All" : "Collapse All"}</h4>
+                <h4 className={styles.toggleText} onClick={handleToggle}>{carouselToggle ? "Show All" : "Collapse All"}</h4>
             </div>
             {data.length === 0 ? (
                 <CircularProgress />
