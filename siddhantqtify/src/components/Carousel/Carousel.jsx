@@ -1,4 +1,3 @@
-// import Swiper core and required modules
 import React, { useEffect } from 'react';
 import  { Navigation } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
